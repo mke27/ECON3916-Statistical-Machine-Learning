@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/mayaellis/Desktop/neu/ECON3916-Statistical-Machine-Learning/portfolio/src/app/layout\":[\"static/media/fc727f226c737876-s.p.woff2\",\"static/media/806de4d605d3ad01-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
