@@ -1,14 +1,20 @@
+import Image from "next/image";
+
 export function Hero() {
   return (
     <section id="hero" className="pt-20 pb-24 border-b border-border">
       <div className="max-w-4xl mx-auto px-6">
         <div className="flex flex-col sm:flex-row items-start gap-10">
-          {/* Photo placeholder */}
-          <div className="flex-shrink-0 w-20 h-20 sm:w-28 sm:h-28 rounded-sm bg-surface border border-border flex items-center justify-center text-ink-muted">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
+          {/* Photo */}
+          <div className="flex-shrink-0 w-20 h-20 sm:w-28 sm:h-28 rounded-sm overflow-hidden border border-border bg-surface">
+            <Image
+              src="/5E15600C-8E31-42F3-868A-9EDF13B9128F_1_105_c.png"
+              alt="Maya Ellis"
+              width={112}
+              height={112}
+              className="w-full h-full object-cover"
+              priority
+            />
           </div>
 
           <div className="flex-1">

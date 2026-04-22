@@ -17,7 +17,7 @@ export function Contact() {
             ellis.may@northeastern.edu
           </a>
           <a
-            href="www.linkedin.com/in/mayakellis"
+            href="https://www.linkedin.com/in/mayakellis"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-4 py-3 border border-border rounded-sm text-sm font-mono text-ink-muted hover:text-ink hover:border-ink-muted transition-colors"
@@ -27,7 +27,7 @@ export function Contact() {
               <rect x="2" y="9" width="4" height="12" />
               <circle cx="4" cy="4" r="2" />
             </svg>
-            LinkedIn
+            @mayakellis
           </a>
         </div>
       </div>
