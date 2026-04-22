@@ -128,8 +128,8 @@ export function Gallery() {
                   </div>
                 )}
 
-                {/* Hover overlay — slides up from bottom */}
-                <div className="absolute inset-0 flex flex-col justify-end p-5 bg-neutral-900 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                {/* Hover overlay */}
+                <div className="absolute inset-0 flex flex-col justify-end p-5 bg-neutral-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-xs text-neutral-300 leading-relaxed mb-4">
                     {project.description}
                   </p>
