@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { projects } from "@/lib/data/projects";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -100,22 +101,32 @@ export function Gallery() {
                 key={project.title}
                 className="group relative overflow-hidden rounded-sm border border-border aspect-[4/3] hover:border-ink-muted transition-colors"
               >
-                {/* Thumbnail */}
-                <div
-                  className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-bg-subtle"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(var(--color-border) 1px, transparent 1px), linear-gradient(to right, var(--color-border) 1px, transparent 1px)",
-                    backgroundSize: "22px 22px",
-                  }}
-                >
-                  <span className="text-ink-muted opacity-30">
-                    <Icon />
-                  </span>
-                  <span className="text-xs font-mono text-ink-muted text-center px-6 leading-relaxed">
-                    {project.title}
-                  </span>
-                </div>
+                {/* Thumbnail — real image or grid placeholder */}
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                ) : (
+                  <div
+                    className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-bg-subtle"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(var(--color-border) 1px, transparent 1px), linear-gradient(to right, var(--color-border) 1px, transparent 1px)",
+                      backgroundSize: "22px 22px",
+                    }}
+                  >
+                    <span className="text-ink-muted opacity-30">
+                      <Icon />
+                    </span>
+                    <span className="text-xs font-mono text-ink-muted text-center px-6 leading-relaxed">
+                      {project.title}
+                    </span>
+                  </div>
+                )}
 
                 {/* Hover overlay — slides up from bottom */}
                 <div className="absolute inset-0 flex flex-col justify-end p-5 bg-neutral-900 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
