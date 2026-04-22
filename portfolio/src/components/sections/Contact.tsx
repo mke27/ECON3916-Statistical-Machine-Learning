@@ -17,7 +17,7 @@ export function Contact() {
             ellis.may@northeastern.edu
           </a>
           <a
-            href="https://www.linkedin.com/in/maya-ellis"
+            href="www.linkedin.com/in/mayakellis"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-4 py-3 border border-border rounded-sm text-sm font-mono text-ink-muted hover:text-ink hover:border-ink-muted transition-colors"
